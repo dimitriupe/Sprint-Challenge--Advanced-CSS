@@ -11,6 +11,13 @@
     p {
       padding:0 15px;
     }
+
+    img {
+      border-radius: 20px;
+      @media @phone {
+        width: 100%;
+      }
+    }
   
   }
 
@@ -24,6 +31,21 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+
+    @media @phone {
+
+      .blast {
+        width: 100%;
+      }
+
+      .sky {
+        display: none;
+      }
+
+      .launch {
+        display: none;
+      }
     }
   }
 
@@ -45,7 +67,7 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
-
+    
     .walk-text {
       width: 50%;
 
@@ -58,6 +80,20 @@
       }
 
       .btn {
+        .border-radius();
+        .btn-color();
+        background-color: @btn-bg-color;
+        font-size: 15px;
+        font-weight: bold;
+        border-color: @border-real;
+        width: 28%;
+        padding: 10px 20px 10px 20px;
+        text-align: center;
+
+        &:hover {
+          background-color: @shuttle-gray;
+          .btn-color-hover();
+        }
       }
     }
 
@@ -71,5 +107,29 @@
         border-radius: 10px;
       }
     }
+
+    @media @phone {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 120%;
+      margin-left: -50px;
+
+      .walk-img {
+        width: 100%;
+        margin-left: 0px;
+      }
+
+      .walk-text {
+        width: 100%;
+        padding-top: 20px;
+
+        .btn {
+          width: 100%;
+          text-align: center;
+          padding: 25px 0px 25px 0px;
+        }
+      }
+    }
+
   }
 }// home

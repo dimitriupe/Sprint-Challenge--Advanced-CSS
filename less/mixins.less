@@ -1,1 +1,25 @@
 // Mixins Here
+
+.display {
+    display: flex;
+    flex-direction: column;
+}
+
+.justify {
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.border-radius(@radius: 4px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+  }
+
+.btn-color(@color: white) {
+    color: @color;
+}
+
+.btn-color-hover(@color: black) {
+    color: @color;
+}
